@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://luxury-boba-aadc06.netlify.app//admin"
+  to = "https://luxury-boba-aadc06.netlify.app//admin/index.html"
+  status = 200
