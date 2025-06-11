@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: [studiolaika]/[studiolaika-websige]
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "about.html"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
