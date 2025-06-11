@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Leica - Precision Meets Artistry</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-neutral-200 font-sans">
+
+    <div id="root" class="overflow-x-hidden">
+        <!-- Header -->
+        <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="assets/logo.svg" alt="Studio Leica Logo" class="h-6">
+                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider">
+                    <a href="index.html" class="nav-link active">MAIN</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="guide.html" class="nav-link">GUIDE</a>
+                    <a href="booking.html" class="nav-link">BOOKING</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden z-50">
+                    <i data-lucide="menu" class="text-white w-6 h-6"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-40 md:hidden">
+            <nav class="flex flex-col items-center justify-center h-full gap-10 text-xl tracking-wider">
+                <a href="index.html" class="nav-link active">MAIN</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="guide.html" class="nav-link">GUIDE</a>
+                <a href="booking.html" class="nav-link">BOOKING</a>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="h-screen min-h-[600px] w-full flex items-center justify-center bg-black">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+                 <source src="https://r2.flowith.net/files/o/1749610964561-promotional_video_production_scene_index_2.mp4" type="video/mp4">
+            </video>
+            <div class="text-center z-20 px-4 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight text-white">
+                    Precision Meets Artistry
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-neutral-300">
+                    순간을 포착하여 영원을 만드는 곳, 스튜디오 라이카입니다.
+                </p>
+                <a href="#services" class="inline-block mt-8 bg-leica-red text-white py-3 px-8 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-leica-red transition-all duration-300">
+                    Discover Our Services
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <main id="services" class="py-20 md:py-32 bg-neutral-950">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                    
+                    <!-- Service 1: Studio Rental -->
+                    <a href="guide.html#rental" class="group service-card relative overflow-hidden h-[70vh] min-h-[500px] flex items-end p-8 md:p-10 bg-black">
+                        <div class="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-105 opacity-50 group-hover:opacity-70" style="background-image: url('https://r2.flowith.net/files/o/1749610962124-professional_rental_studio_interior_index_0@1024x1024.png');"></div>
+                        <div class="relative z-10 text-white">
+                            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Studio Rental</h2>
+                            <p class="mt-2 text-neutral-300 max-w-xs">최고의 환경을 제공하는 전문가를 위한 렌탈 스튜디오</p>
+                            <div class="mt-6 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-white">
+                                <span>Learn More</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Service 2: Advertising Photography -->
+                    <a href="guide.html#photo" class="group service-card relative overflow-hidden h-[70vh] min-h-[500px] flex items-end p-8 md:p-10 bg-black">
+                        <div class="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-105 opacity-50 group-hover:opacity-70" style="background-image: url('https://r2.flowith.net/files/o/1749610981649-advertising_photo_shoot_scene_index_1@1024x1024.png');"></div>
+                        <div class="relative z-10 text-white">
+                            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Advertising Photo</h2>
+                            <p class="mt-2 text-neutral-300 max-w-xs">브랜드의 가치를 높이는 독보적인 광고 사진</p>
+                            <div class="mt-6 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-white">
+                                <span>Learn More</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Service 3: Promotional Video -->
+                    <a href="guide.html#video" class="group service-card relative overflow-hidden h-[70vh] min-h-[500px] flex items-end p-8 md:p-10 bg-black">
+                        <div class="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out group-hover:scale-105 opacity-50 group-hover:opacity-70" style="background-image: url('https://r2.flowith.net/files/o/1749610964561-promotional_video_production_scene_index_2@1024x1024.png');"></div>
+                        <div class="relative z-10 text-white">
+                            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Promotional Video</h2>
+                            <p class="mt-2 text-neutral-300 max-w-xs">시선을 사로잡는 감각적인 스토리텔링 영상 제작</p>
+                            <div class="mt-6 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-white">
+                                <span>Learn More</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-neutral-950 text-neutral-400">
+            <div class="container mx-auto px-6 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <a href="index.html" class="flex items-center gap-2">
+                             <img src="assets/logo.svg" alt="Studio Leica Logo" class="h-6">
+                        </a>
+                        <p class="mt-4 text-sm max-w-xs">Precision Meets Artistry. 최고의 결과물을 위한 완벽한 공간과 기술을 제공합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold tracking-wider text-white uppercase">Sitemap</h4>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><a href="index.html" class="hover:text-white transition-colors">Main</a></li>
+                            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                            <li><a href="guide.html" class="hover:text-white transition-colors">Guide</a></li>
+                            <li><a href="booking.html" class="hover:text-white transition-colors">Booking</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold tracking-wider text-white uppercase">Contact</h4>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li><a href="mailto:contact@studioleica.com" class="hover:text-white transition-colors">contact@studioleica.com</a></li>
+                            <li><a href="tel:+82-10-1234-5678" class="hover:text-white transition-colors">+82 10 1234 5678</a></li>
+                            <li><p>Seoul, Republic of Korea</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-neutral-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-xs">&copy; <span id="year"></span> Studio Leica. All Rights Reserved.</p>
+                    <div class="flex gap-4 mt-4 sm:mt-0">
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

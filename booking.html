@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Status - Studio Leica</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-950 text-neutral-200 font-sans">
+
+    <div id="root" class="overflow-x-hidden">
+        <!-- Header -->
+        <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="assets/logo.svg" alt="Studio Leica Logo" class="h-6">
+                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider">
+                    <a href="index.html" class="nav-link">MAIN</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="guide.html" class="nav-link">GUIDE</a>
+                    <a href="booking.html" class="nav-link active">BOOKING</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden z-50">
+                    <i data-lucide="menu" class="text-white w-6 h-6"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-40 md:hidden">
+            <nav class="flex flex-col items-center justify-center h-full gap-10 text-xl tracking-wider">
+                <a href="index.html" class="nav-link">MAIN</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="guide.html" class="nav-link">GUIDE</a>
+                <a href="booking.html" class="nav-link active">BOOKING</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="pt-24 md:pt-32">
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                <header class="text-center max-w-3xl mx-auto">
+                     <div class="flex justify-center items-center gap-3">
+                         <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-white">Booking Status</h1>
+                         <img src="assets/leica_dot.svg" class="h-4 w-4" alt="Red dot">
+                    </div>
+                    <p class="mt-4 text-lg text-neutral-300">
+                        스튜디오 렌탈 예약 현황입니다. 실시간 현황은 전화 문의 시 가장 정확합니다.
+                    </p>
+                </header>
+
+                <div class="mt-16 max-w-4xl mx-auto bg-neutral-900 p-6 md:p-8 rounded-lg">
+                    <div id="calendar-container">
+                        <div class="flex justify-between items-center mb-6">
+                            <button id="prev-month" class="p-2 rounded-full hover:bg-neutral-800 transition-colors">
+                                <i data-lucide="chevron-left" class="w-6 h-6 text-neutral-400"></i>
+                            </button>
+                            <h2 id="calendar-title" class="text-xl md:text-2xl font-bold text-white"></h2>
+                            <button id="next-month" class="p-2 rounded-full hover:bg-neutral-800 transition-colors">
+                                <i data-lucide="chevron-right" class="w-6 h-6 text-neutral-400"></i>
+                            </button>
+                        </div>
+                        <div id="calendar-grid" class="grid grid-cols-7 gap-1">
+                            <!-- Calendar Header -->
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Sun</div>
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Mon</div>
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Tue</div>
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Wed</div>
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Thu</div>
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Fri</div>
+                            <div class="text-center font-semibold text-xs text-neutral-400 uppercase tracking-wider py-2">Sat</div>
+                            <!-- Calendar Days will be generated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex justify-center items-center gap-6 text-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="w-4 h-4 rounded-full bg-neutral-700"></span>
+                            <span class="text-neutral-400">예약 마감</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-4 h-4 rounded-full border border-neutral-600"></span>
+                            <span class="text-neutral-400">예약 가능</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-neutral-400">광고 사진 및 홍보 영상 제작은 별도 문의가 필요합니다.</p>
+                    <a href="mailto:contact@studioleica.com" class="inline-block mt-4 bg-leica-red text-white py-3 px-8 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-leica-red transition-all duration-300">
+                        프로젝트 문의하기
+                    </a>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-black text-neutral-400">
+            <div class="container mx-auto px-6 py-12">
+                <div class="border-t border-neutral-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-xs">&copy; <span id="year"></span> Studio Leica. All Rights Reserved.</p>
+                    <div class="flex gap-4 mt-4 sm:mt-0">
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

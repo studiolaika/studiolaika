@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Studio Leica</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-950 text-neutral-200 font-sans">
+
+    <div id="root" class="overflow-x-hidden">
+        <!-- Header -->
+        <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="assets/logo.svg" alt="Studio Leica Logo" class="h-6">
+                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider">
+                    <a href="index.html" class="nav-link">MAIN</a>
+                    <a href="about.html" class="nav-link active">ABOUT</a>
+                    <a href="guide.html" class="nav-link">GUIDE</a>
+                    <a href="booking.html" class="nav-link">BOOKING</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden z-50">
+                    <i data-lucide="menu" class="text-white w-6 h-6"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-40 md:hidden">
+            <nav class="flex flex-col items-center justify-center h-full gap-10 text-xl tracking-wider">
+                <a href="index.html" class="nav-link">MAIN</a>
+                <a href="about.html" class="nav-link active">ABOUT</a>
+                <a href="guide.html" class="nav-link">GUIDE</a>
+                <a href="booking.html" class="nav-link">BOOKING</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="pt-24 md:pt-32">
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                <header class="text-center max-w-3xl mx-auto">
+                    <div class="flex justify-center items-center gap-3">
+                         <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-white">About Studio Leica</h1>
+                         <img src="assets/leica_dot.svg" class="h-4 w-4" alt="Red dot">
+                    </div>
+                    <p class="mt-4 text-lg text-neutral-300">
+                        "정밀함과 예술성의 만남, 순간을 포착하다"
+                    </p>
+                </header>
+
+                <div class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-16 items-center">
+                    <div class="md:col-span-3">
+                        <h2 class="text-2xl font-bold text-white tracking-tight">Our Philosophy</h2>
+                        <div class="prose prose-invert max-w-none mt-4 text-neutral-300">
+                            <p>스튜디오 라이카는 전설적인 카메라 브랜드 '라이카'가 상징하는 정밀공학과 장인정신에서 영감을 받았습니다. 우리는 모든 프로젝트에서 기술적 완벽함과 예술적 감성이 조화를 이루어야 한다고 믿습니다. 우리의 목표는 단순한 사진이나 영상을 넘어, 브랜드의 철학과 가치를 담아내는 시각적 결과물을 창조하는 것입니다.</p>
+                            <p>클라이언트의 비전을 실현하기 위해 우리는 최상의 장비, 창의적인 공간, 그리고 숙련된 전문가 팀을 갖추고 있습니다. 스튜디오 라이카는 모든 순간이 가진 고유의 아름다움을 포착하고, 그것을 영원한 예술로 만드는 여정에 당신과 함께합니다.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <img src="https://r2.flowith.net/files/o/1749610981649-advertising_photo_shoot_scene_index_1@1024x1024.png" alt="Studio Leica workspace" class="rounded-lg shadow-2xl object-cover w-full h-auto aspect-square">
+                    </div>
+                </div>
+
+                <div class="mt-16 md:mt-24">
+                    <h2 class="text-3xl font-bold text-white tracking-tight text-center">Meet the Team</h2>
+                    <p class="text-center mt-2 text-neutral-400">우리의 열정과 전문성으로 당신의 비전을 현실로 만듭니다.</p>
+
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="text-center p-6 bg-neutral-900 rounded-lg">
+                            <img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team member" class="w-24 h-24 rounded-full mx-auto object-cover">
+                            <h3 class="mt-4 text-xl font-bold text-white">J. Kim</h3>
+                            <p class="text-sm text-leica-red font-semibold">Chief Photographer</p>
+                            <p class="mt-2 text-sm text-neutral-400">"빛과 그림자로 이야기를 만듭니다."</p>
+                        </div>
+                         <div class="text-center p-6 bg-neutral-900 rounded-lg">
+                            <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team member" class="w-24 h-24 rounded-full mx-auto object-cover">
+                            <h3 class="mt-4 text-xl font-bold text-white">S. Park</h3>
+                            <p class="text-sm text-leica-red font-semibold">Video Director</p>
+                            <p class="mt-2 text-sm text-neutral-400">"움직임 속에 감동을 담아냅니다."</p>
+                        </div>
+                         <div class="text-center p-6 bg-neutral-900 rounded-lg">
+                            <img src="https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team member" class="w-24 h-24 rounded-full mx-auto object-cover">
+                            <h3 class="mt-4 text-xl font-bold text-white">Y. Lee</h3>
+                            <p class="text-sm text-leica-red font-semibold">Studio Manager</p>
+                            <p class="mt-2 text-sm text-neutral-400">"최고의 창작 환경을 제공합니다."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-black text-neutral-400">
+            <div class="container mx-auto px-6 py-12">
+                <div class="border-t border-neutral-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-xs">&copy; <span id="year"></span> Studio Leica. All Rights Reserved.</p>
+                    <div class="flex gap-4 mt-4 sm:mt-0">
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                         <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

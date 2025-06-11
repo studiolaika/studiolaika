@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+        font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    }
+}
+
+@layer components {
+    .nav-link {
+        @apply relative text-neutral-300 transition-colors duration-300 hover:text-white;
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #E50000;
+        transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+    .nav-link.active {
+        @apply text-white;
+    }
+    .service-card h2, .service-card p {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    .service-card:hover h2 {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 0.1s;
+    }
+    .service-card:hover p {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 0.2s;
+    }
+    .service-card:hover .mt-6 {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 0.3s;
+    }
+    .service-card .mt-6 {
+         transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .calendar-day {
+        @apply w-full aspect-square flex items-center justify-center border border-transparent transition-colors duration-200;
+    }
+    
+    .calendar-day.other-month {
+        @apply text-neutral-700;
+    }
+
+    .calendar-day.available {
+        @apply text-neutral-300 border border-neutral-800 hover:bg-neutral-800 cursor-pointer;
+    }
+
+    .calendar-day.booked {
+        @apply bg-neutral-700 text-neutral-500 cursor-not-allowed line-through;
+    }
+    
+    .calendar-day.today {
+        @apply border-leica-red;
+    }
+}
+
+@layer utilities {
+    .bg-leica-red {
+        background-color: #E50000;
+    }
+    .text-leica-red {
+        color: #E50000;
+    }
+    .border-leica-red {
+        border-color: #E50000;
+    }
+    .hover\:text-leica-red:hover {
+        color: #E50000;
+    }
+     .hover\:bg-leica-red:hover {
+        background-color: #E50000;
+    }
+    .bg-neutral-950 {
+        background-color: #0a0a0a;
+    }
+
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+}
